@@ -63,6 +63,7 @@
 ## Demo
 
 - A live demo of the project is hosted on Netlify: [Demo Link](https://gamitar-demo.qumberrizvi.com)
+- For the Ceasar Cipher Demo please visit: [Ceasar Cipher](https://gamitar-demo.qumberrizvi.com/ceasar-cipher)
 
 ## Frontend Libraries and Frameworks
 
