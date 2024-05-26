@@ -4,7 +4,7 @@
     --card-shadow: rgba(0, 0, 0, 0.1);
     --primary-text: #333;
     --secondary-text: #555;
-    --accent-color: #3498db;
+    --accent-color: #3498db; /* Soft blue accent color */
     --button-bg: #3498db;
     --button-text: #ffffff;
     --input-bg: #ffffff;
@@ -32,7 +32,7 @@ body {
     text-transform: uppercase;
     margin: 20px 0;
     text-align: center;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 }
 
 .container {
@@ -74,7 +74,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    overflow-y: auto; /* Enable scrolling for overflow content */
     position: relative;
 }
 
@@ -99,11 +99,61 @@ body {
     box-shadow: 0 4px 6px var(--card-shadow);
     border: none;
     cursor: grab;
+    position: relative;
+}
+
+.list-group-item h5 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+.list-group-item p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--secondary-text);
+}
+
+.list-group-item .priority-indicator {
+    width: 20px;
+    height: 10px;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: default;
+}
+
+.list-group-item div {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.list-group-item button {
+    margin-left: 5px;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: var(--button-text);
+    box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+.list-group-item button:focus {
+    outline: none;
+}
+
+.list-group-item button .fas {
+    color: var(--icon-color);
 }
 
 textarea,
 input[type="text"],
-input[type="date"] {
+input[type="date"],
+select {
     background: var(--input-bg);
     border: 1px solid var(--input-border);
     border-radius: 5px;
@@ -135,6 +185,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 button#save-btn,
+button#update-btn,
 button#open-add-modal-btn {
     background: var(--button-bg);
     border: none;
@@ -146,6 +197,7 @@ button#open-add-modal-btn {
 }
 
 button#save-btn:focus,
+button#update-btn:focus,
 button#open-add-modal-btn:focus {
     outline: none;
 }
@@ -166,4 +218,14 @@ button#open-add-modal-btn .fas {
     color: var(--primary-text);
     border-radius: 5px;
     box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+/* Additional styles for due date alignment */
+.due-date {
+    display: flex;
+    align-items: center;
+}
+
+.due-date i {
+    margin-right: 5px;
 }
