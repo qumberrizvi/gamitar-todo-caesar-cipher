@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container mt-5">
+  <h1 class="text-center stylish-title">To-Do List</h1>
+  <div class="d-flex justify-content-end mb-4">
+    <button id="open-add-modal-btn" class="btn btn-primary" data-toggle="modal" data-target="#todoModal">
+      <i class="fas fa-plus"></i> Add To-Do
+    </button>
+  </div>
+  <div class="columns">
+    <div class="card pastel-blue">
+      <div class="card-header">To Do</div>
+      <div class="card-body">
+        <ul class="list-group" id="todo"></ul>
+      </div>
+    </div>
+    <div class="card pastel-yellow">
+      <div class="card-header">Doing</div>
+      <div class="card-body">
+        <ul class="list-group" id="doing"></ul>
+      </div>
+    </div>
+    <div class="card pastel-green">
+      <div class="card-header">Done</div>
+      <div class="card-body">
+        <ul class="list-group" id="done"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="todoModal" tabindex="-1" aria-labelledby="todoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="todoModalLabel">Add To-Do</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="todo-form">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control" placeholder="Title">
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" class="form-control" placeholder="Description" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" class="form-control">
+          </div>
+          <button type="button" id="save-btn" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

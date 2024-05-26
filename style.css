@@ -1,0 +1,169 @@
+:root {
+    --primary-bg: #f0f4f8;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --primary-text: #333;
+    --secondary-text: #555;
+    --accent-color: #3498db;
+    --button-bg: #3498db;
+    --button-text: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #ddd;
+    --input-shadow: rgba(0, 0, 0, 0.1);
+    --icon-color: #ffffff;
+    --placeholder-text: #999;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+}
+
+.stylish-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    text-transform: uppercase;
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+    min-height: 200px;
+}
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 15px;
+    background: var(--accent-color);
+    color: var(--icon-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+}
+
+.card-body .placeholder-text {
+    color: var(--placeholder-text);
+    text-align: center;
+    margin: auto;
+}
+
+.list-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.list-group-item {
+    background: var(--card-bg);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    border: none;
+    cursor: grab;
+}
+
+textarea,
+input[type="text"],
+input[type="date"] {
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px var(--input-shadow);
+    color: var(--primary-text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="date"] {
+    position: relative;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    color: var(--accent-color);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+button#save-btn,
+button#open-add-modal-btn {
+    background: var(--button-bg);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: var(--button-text);
+    box-shadow: 0 4px 6px var(--card-shadow);
+    cursor: pointer;
+}
+
+button#save-btn:focus,
+button#open-add-modal-btn:focus {
+    outline: none;
+}
+
+button#open-add-modal-btn {
+    display: flex;
+    align-items: center;
+}
+
+button#open-add-modal-btn .fas {
+    margin-right: 5px;
+    color: var(--icon-color);
+}
+
+.tooltip-inner {
+    max-width: 200px;
+    background: var(--card-bg);
+    color: var(--primary-text);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--card-shadow);
+}
