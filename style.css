@@ -76,6 +76,8 @@ body {
     flex-direction: column;
     overflow-y: auto; /* Enable scrolling for overflow content */
     position: relative;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
 
 .card-body .placeholder-text {
@@ -228,4 +230,61 @@ button#open-add-modal-btn .fas {
 
 .due-date i {
     margin-right: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .list-group-item {
+        padding: 10px;
+    }
+
+    .list-group-item h5 {
+        margin-bottom: 5px;
+    }
+
+    .list-group-item div {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .stylish-title {
+        font-size: 2rem;
+    }
+
+    .card-header {
+        font-size: 0.875rem;
+        padding: 8px;
+    }
+
+    .card-body {
+        padding: 8px;
+    }
+
+    .list-group-item {
+        padding: 8px;
+    }
+
+    .list-group-item h5 {
+        margin-bottom: 5px;
+    }
+
+    .list-group-item div {
+        margin-top: 5px;
+    }
+
+    button#save-btn,
+    button#update-btn,
+    button#open-add-modal-btn {
+        padding: 8px 16px;
+    }
 }

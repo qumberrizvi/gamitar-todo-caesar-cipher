@@ -17,53 +17,29 @@
       <i class="fas fa-plus"></i> Add To-Do
     </button>
   </div>
-  <div class="columns">
-    <div class="card" ondragover="allowDrop(event)" ondrop="drop(event, 'todo')">
-      <div class="card-header d-flex justify-content-between align-items-center">
-        To Do
-        <div>
-          <button class="btn btn-sm btn-light sort-btn" data-column="todo" data-sortby="priority" title="Sort by Priority">
-            <i class="fas fa-sort-amount-down-alt"></i>
-          </button>
-          <button class="btn btn-sm btn-light sort-btn" data-column="todo" data-sortby="endDate" title="Sort by End Date">
-            <i class="fas fa-calendar-alt"></i>
-          </button>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="card" ondragover="allowDrop(event)" ondrop="drop(event, 'todo')">
+        <div class="card-header">To Do</div>
+        <div class="card-body">
+          <ul class="list-group" id="todo"></ul>
         </div>
-      </div>
-      <div class="card-body">
-        <ul class="list-group" id="todo"></ul>
       </div>
     </div>
-    <div class="card" ondragover="allowDrop(event)" ondrop="drop(event, 'doing')">
-      <div class="card-header d-flex justify-content-between align-items-center">
-        Doing
-        <div>
-          <button class="btn btn-sm btn-light sort-btn" data-column="doing" data-sortby="priority" title="Sort by Priority">
-            <i class="fas fa-sort-amount-down-alt"></i>
-          </button>
-          <button class="btn btn-sm btn-light sort-btn" data-column="doing" data-sortby="endDate" title="Sort by End Date">
-            <i class="fas fa-calendar-alt"></i>
-          </button>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="card" ondragover="allowDrop(event)" ondrop="drop(event, 'doing')">
+        <div class="card-header">Doing</div>
+        <div class="card-body">
+          <ul class="list-group" id="doing"></ul>
         </div>
-      </div>
-      <div class="card-body">
-        <ul class="list-group" id="doing"></ul>
       </div>
     </div>
-    <div class="card" ondragover="allowDrop(event)" ondrop="drop(event, 'done')">
-      <div class="card-header d-flex justify-content-between align-items-center">
-        Done
-        <div>
-          <button class="btn btn-sm btn-light sort-btn" data-column="done" data-sortby="priority" title="Sort by Priority">
-            <i class="fas fa-sort-amount-down-alt"></i>
-          </button>
-          <button class="btn btn-sm btn-light sort-btn" data-column="done" data-sortby="endDate" title="Sort by End Date">
-            <i class="fas fa-calendar-alt"></i>
-          </button>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="card" ondragover="allowDrop(event)" ondrop="drop(event, 'done')">
+        <div class="card-header">Done</div>
+        <div class="card-body">
+          <ul class="list-group" id="done"></ul>
         </div>
-      </div>
-      <div class="card-body">
-        <ul class="list-group" id="done"></ul>
       </div>
     </div>
   </div>
@@ -96,9 +72,9 @@
           <div class="form-group">
             <label for="priority">Priority</label>
             <select id="priority" class="form-control">
-              <option value="High">High</option>
-              <option value="Medium">Medium</option>
-              <option value="Low">Low</option>
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
             </select>
           </div>
           <button type="button" id="save-btn" class="btn btn-primary">Save</button>
