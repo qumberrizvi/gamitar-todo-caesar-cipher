@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Variation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #output {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Caesar Cipher Variation</h1>
+<label for="inputString">Enter String:</label><br>
+<input type="text" id="inputString" placeholder="Enter string to encode"><br>
+<label for="inputShift">Enter Initial Shift:</label><br>
+<input type="number" id="inputShift" placeholder="Enter initial shift"><br>
+<button onclick="encodeMessage()">Encode</button>
+
+<div id="output"></div>
+
+<script src="solution.js"></script>
+<script>
+    function encodeMessage() {
+        const inputString = document.getElementById('inputString').value;
+        const inputShift = parseInt(document.getElementById('inputShift').value, 10);
+
+        if (inputString && !isNaN(inputShift)) {
+            const result = movingShift(inputString, inputShift);
+            document.getElementById('output').innerHTML = `
+                    <h2>Encoded Message</h2>
+                    <pre>${JSON.stringify(result, null, 2)}</pre>
+                `;
+        } else {
+            alert('Please enter a valid string and shift value.');
+        }
+    }
+</script>
+</body>
+</html>
