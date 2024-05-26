@@ -20,7 +20,17 @@
   <div class="row">
     <div class="col-lg-4 col-md-6 mb-3">
       <div class="card" ondragover="allowDrop(event)" ondrop="drop(event, 'todo')">
-        <div class="card-header">To Do</div>
+        <div class="card-header">
+          <span>To Do</span>
+          <div class="btn-group float-right">
+            <button class="btn btn-sm sort-btn" data-column="todo" data-sortby="priority" data-toggle="tooltip" title="Sort by Priority">
+              <i class="fas fa-sort-amount-down-alt"></i>
+            </button>
+            <button class="btn btn-sm sort-btn" data-column="todo" data-sortby="endDate" data-toggle="tooltip" title="Sort by End Date">
+              <i class="fas fa-calendar-alt"></i>
+            </button>
+          </div>
+        </div>
         <div class="card-body">
           <ul class="list-group" id="todo"></ul>
         </div>
@@ -28,7 +38,17 @@
     </div>
     <div class="col-lg-4 col-md-6 mb-3">
       <div class="card" ondragover="allowDrop(event)" ondrop="drop(event, 'doing')">
-        <div class="card-header">Doing</div>
+        <div class="card-header">
+          <span>Doing</span>
+          <div class="btn-group float-right">
+            <button class="btn btn-sm sort-btn" data-column="doing" data-sortby="priority" data-toggle="tooltip" title="Sort by Priority">
+              <i class="fas fa-sort-amount-down-alt"></i>
+            </button>
+            <button class="btn btn-sm sort-btn" data-column="doing" data-sortby="endDate" data-toggle="tooltip" title="Sort by End Date">
+              <i class="fas fa-calendar-alt"></i>
+            </button>
+          </div>
+        </div>
         <div class="card-body">
           <ul class="list-group" id="doing"></ul>
         </div>
@@ -36,7 +56,17 @@
     </div>
     <div class="col-lg-4 col-md-6 mb-3">
       <div class="card" ondragover="allowDrop(event)" ondrop="drop(event, 'done')">
-        <div class="card-header">Done</div>
+        <div class="card-header">
+          <span>Done</span>
+          <div class="btn-group float-right">
+            <button class="btn btn-sm sort-btn" data-column="done" data-sortby="priority" data-toggle="tooltip" title="Sort by Priority">
+              <i class="fas fa-sort-amount-down-alt"></i>
+            </button>
+            <button class="btn btn-sm sort-btn" data-column="done" data-sortby="endDate" data-toggle="tooltip" title="Sort by End Date">
+              <i class="fas fa-calendar-alt"></i>
+            </button>
+          </div>
+        </div>
         <div class="card-body">
           <ul class="list-group" id="done"></ul>
         </div>

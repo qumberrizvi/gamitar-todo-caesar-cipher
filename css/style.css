@@ -12,6 +12,9 @@
     --input-shadow: rgba(0, 0, 0, 0.1);
     --icon-color: #ffffff;
     --placeholder-text: #999;
+    --sort-button-bg: #ffffff; /* Background color for sorting buttons */
+    --sort-button-text: #3498db; /* Text color for sorting buttons */
+    --sort-button-border: #ddd; /* Border color for sorting buttons */
 }
 
 body {
@@ -67,6 +70,9 @@ body {
     background: var(--accent-color);
     color: var(--icon-color);
     border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .card-body {
@@ -230,6 +236,17 @@ button#open-add-modal-btn .fas {
 
 .due-date i {
     margin-right: 5px;
+}
+
+.sort-btn {
+    background-color: var(--sort-button-bg) !important;
+    color: var(--sort-button-text) !important;
+    border: 1px solid var(--sort-button-border) !important;
+}
+
+.sort-btn:hover {
+    background-color: var(--button-bg) !important;
+    color: var(--button-text) !important;
 }
 
 /* Media Queries for Responsiveness */
