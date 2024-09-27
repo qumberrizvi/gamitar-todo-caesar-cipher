@@ -57,8 +57,10 @@
 
 ## Running the Project
 
-1. Open `index.html` in your preferred web browser.
-    - No additional build steps are required.
+1. Start the project using a simple http server via one of the following:
+    - npx: Run `npx http-server`
+    - Webstorm: Open `index.html`, press the **Run Current File** button on top right
+    - VS Code: Install plugin **Live Server**, navigate to `index.html`, right click and choose **Open with Live Server**
 
 ## Demo
 
